@@ -19,7 +19,9 @@ readonly tests_all4="z3 spec spec-bench security"
 
 readonly tests_all="$tests_all1 $tests_all2 $tests_all3 $tests_all4"
 # readonly tests_allt="$tests_all1 $tests_all2"  # run with 'allt' command option
-readonly tests_allt="barnes cfrac espresso gs lua z3 alloc-test cache-scratch cache_trash glibc-simple glibc-thread malloc-large mleak rptest mstress rbstress sh6bench sh8benchN xmalloc-testN"  # run with 'allt' command option
+
+# NOTE(feniljain): removed test: alloc-test
+readonly tests_allt="barnes cfrac espresso gs lua z3 cache-scratch cache_trash glibc-simple glibc-thread malloc-large mleak rptest mstress rbstress sh6bench sh8benchN xmalloc-testN"  # run with 'allt' command option
 
 tests_run=""
 tests_exclude=""
