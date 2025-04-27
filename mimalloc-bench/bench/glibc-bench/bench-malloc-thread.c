@@ -142,6 +142,8 @@ malloc_benchmark_loop (void **ptr_arr)
       unsigned int next_idx = get_random_offset (&offset_state);
       unsigned int next_block = get_random_block_size (&block_state);
 
+      fprintf(stderr, "next_block: %d - next_idx: %d - pthread_self: %p\n", next_block, next_idx, pthread_self());
+
       free (ptr_arr[next_idx]);
 
       void* p = ptr_arr[next_idx] = malloc (next_block);
